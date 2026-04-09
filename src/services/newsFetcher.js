@@ -2,7 +2,7 @@ const Parser = require("rss-parser");
 
 const parser = new Parser();
 
-const fetchNews = async () => {
+const newsFetcher = async () => {
   try {
     const feed = await parser.parseURL(
       "https://techcrunch.com/feed/"
@@ -21,4 +21,4 @@ const fetchNews = async () => {
   }
 };
 
-module.exports = { fetchNews };
+module.exports = { newsFetcher };
